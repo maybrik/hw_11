@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}All books{% endblock %}
+
+{% block content %}
+<div>
+    <h2>Here`s presented {{ books.books_amount }} books </h2>
+    {% for book in books %}
+    <p>Book "{{ book.name }}" - costs {{ book.price }} - with {{ book.rating }} stars of our rating</p>
+    <a href="{% url 'book_detail' pk=book.id %}"> for more information </a>
+    {% endfor %}
+</div>
+{% endblock %}

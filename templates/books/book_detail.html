@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block title %}{{ book.name }}{% endblock %}
+
+{% block content %}
+  <h1>{{ book.name }} - {{ book.author.name }}</h1>
+<td>Pages</td>
+<td>{{book.rating}}</td>
+  <p><a href="{% url 'b_detail' %}">A</a>
+{% endblock %}
